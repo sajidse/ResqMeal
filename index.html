@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ResQMeal - Kerala's First Food Rescue Platform</title>
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Tailwind CSS (Preflight disabled to protect existing vanilla CSS) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            corePlugins: { preflight: false },
+            theme: {
+                extend: {
+                    colors: {
+                        blacktheme: '#111111',
+                        darkertheme: '#1a1a1a',
+                        lighttheme: '#FAFAFA',
+                        greytheme: '#F5F5F5',
+                        bordergray: '#E5E5E5'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo"><a href="#" style="text-decoration: none; color: inherit;">ResQMeal</a></div>
+        
+        <!-- Hamburger Menu Button -->
+        <button class="mobile-menu-btn" aria-label="Toggle menu">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" /></svg>
+        </button>
+
+        <ul class="nav-links">
+            <li><a href="#crisis">The Crisis</a></li>
+            <li><a href="#solutions">Modules</a></li>
+            <li><a href="#how-it-works">How It Works</a></li>
+            <li><a href="#why-partner">Benefits</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#impact">Impact</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main class="hero">
+        <div class="hero-content">
+            <h1 class="headline">Kerala's First Food Rescue Platform</h1>
+            <h2 class="sub-headline">Save food. Save money. Save the planet.</h2>
+            <p class="body-text">Partnering with ResQMeal means more revenue, less waste, and real community impact. Onboarding Partners Across Kerala — 2026.</p>
+            
+            <div class="stats">
+                <div class="stat">
+                    <span class="stat-value" id="count-percentage">0%</span>
+                    <span class="stat-label">Food wasted in India</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-value" id="count-value">&#8377;0K Cr</span>
+                    <span class="stat-label">Annual food waste value</span>
+                </div>
+            </div>
+
+            <a href="#contact" class="cta-button">Become a Partner <span class="arrow">&rarr;</span></a>
+        </div>
+        <div class="hero-image-wrapper">
+            <img src="./img/Hero1.jpg" alt="ResQMeal Hero Image" class="hero-image">
+        </div>
+    </main>
+
+    <!-- Transition to Light Section -->
+    <div class="light-section" id="crisis" style="padding-bottom: 4rem;">
+        
+        <!-- Section: The Silent Crisis -->
+        <section class="container" style="max-width: 1400px; margin: 0 auto;">
+            <h2 class="section-heading reveal-up">Food Waste is Kerala's Silent Crisis</h2>
+            <p class="intro-text reveal-up delay-1">Every day, tonnes of perfectly good food are wasted by local commercial kitchens while thousands in our community go hungry.</p>
+            
+            <div class="crisis-layout">
+                <div class="crisis-image-wrapper reveal-up delay-2">
+                    <img src="https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Vibrant Gourmet Produce" class="crisis-image">
+                </div>
+                <div class="crisis-data">
+                    <div class="data-card reveal-up delay-1">
+                        <svg class="data-icon" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="1.5"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                        <div class="data-value">15-20%</div>
+                        <div class="data-label">Represents the average operational cost lost by eateries discarding perfectly edible surplus meals.</div>
+                    </div>
+                    <div class="data-card reveal-up delay-2">
+                        <svg class="data-icon" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                        <div class="data-value">30%</div>
+                        <div class="data-label">Of landfill methane emissions are directly caused by decomposing, unrescued food waste.</div>
+                    </div>
+                    <div class="data-card reveal-up delay-3">
+                        <svg class="data-icon" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="1.5"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+                        <div class="data-value">2.5M</div>
+                        <div class="data-label">Meals can be rescued annually across Kerala through efficient, localized logistics.</div>
+                    </div>
+                    <div class="data-card reveal-up delay-4">
+                        <svg class="data-icon" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="1.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+                        <div class="data-value">48h</div>
+                        <div class="data-label">Is the critical time window in which fresh surplus food must be redistributed safely.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: One Mission -->
+        <section id="solutions" class="container mission-section" style="max-width: 1400px; margin: 0 auto;">
+            <h2 class="section-heading reveal-up">Four Modules. One Mission.</h2>
+            <p class="intro-text reveal-up delay-1">ResQMeal connects surplus food from local businesses directly to NGOs in real-time.</p>
+            
+            <div class="modules-grid">
+                <!-- Module 1 -->
+                <div class="module-card reveal-up delay-1">
+                    <span class="module-tag">MODULE 1</span>
+                    <h3 class="module-title">Donor Portal</h3>
+                    <p class="module-desc">Empower your business to seamlessly donate surplus food with zero liability.</p>
+                    <ul class="module-bullets">
+                        <li>1-click pickup requests</li>
+                        <li>Automated tax receipts</li>
+                    </ul>
+                </div>
+                <!-- Module 2 -->
+                <div class="module-card reveal-up delay-2">
+                    <span class="module-tag">MODULE 2</span>
+                    <h3 class="module-title">NGO Network</h3>
+                    <p class="module-desc">Gain reliable, daily access to high-quality meals for the communities you serve.</p>
+                    <ul class="module-bullets">
+                        <li>Real-time availability alerts</li>
+                        <li>Certified food safety handling</li>
+                    </ul>
+                </div>
+                <!-- Module 3 -->
+                <div class="module-card reveal-up delay-3">
+                    <span class="module-tag">MODULE 3</span>
+                    <h3 class="module-title">ResQ Fleet</h3>
+                    <p class="module-desc">Join our dynamic logistics network to physically transport meals and save the day.</p>
+                    <ul class="module-bullets">
+                        <li>Smart route optimization</li>
+                        <li>Flexible scheduling</li>
+                    </ul>
+                </div>
+                <!-- Module 4 -->
+                <div class="module-card reveal-up delay-4">
+                    <span class="module-tag">MODULE 4</span>
+                    <h3 class="module-title">Impact Engine</h3>
+                    <p class="module-desc">Monitor your environmental and social footprint with transparent, real-time analytics.</p>
+                    <ul class="module-bullets">
+                        <li>Live carbon offset tracking</li>
+                        <li>Transparent community metrics</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Placeholder sections for scroll-anchors -->
+    <!-- Section: How It Works -->
+    <section id="how-it-works" class="py-24 px-5 bg-blacktheme text-center">
+        <h2 class="text-3xl md:text-5xl font-extrabold text-white mb-16 reveal-up">HOW IT WORKS &mdash; Simple. Fast. Impactful.</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-[1400px] mx-auto">
+            <div class="bg-darkertheme border border-zinc-800 p-10 rounded-xl text-left transition duration-300 hover:-translate-y-2 hover:shadow-[0_15px_30px_rgba(0,0,0,0.4)] reveal-up delay-1">
+                <div class="text-6xl font-extrabold text-white opacity-20 mb-4 leading-none">1</div>
+                <h3 class="text-xl font-bold text-white mb-4">Register & Subscribe</h3>
+                <p class="text-zinc-400 text-sm">Sign up on the ResQMeal partner portal. Choose your plan and go live within 24 hours.</p>
+            </div>
+            <div class="bg-darkertheme border border-zinc-800 p-10 rounded-xl text-left transition duration-300 hover:-translate-y-2 hover:shadow-[0_15px_30px_rgba(0,0,0,0.4)] reveal-up delay-2">
+                <div class="text-6xl font-extrabold text-white opacity-20 mb-4 leading-none">2</div>
+                <h3 class="text-xl font-bold text-white mb-4">List Your Surplus</h3>
+                <p class="text-zinc-400 text-sm">Add surplus food or produce daily through the app. Set your price, quantity and pickup time.</p>
+            </div>
+            <div class="bg-darkertheme border border-zinc-800 p-10 rounded-xl text-left transition duration-300 hover:-translate-y-2 hover:shadow-[0_15px_30px_rgba(0,0,0,0.4)] reveal-up delay-3">
+                <div class="text-6xl font-extrabold text-white opacity-20 mb-4 leading-none">3</div>
+                <h3 class="text-xl font-bold text-white mb-4">Customer Buys</h3>
+                <p class="text-zinc-400 text-sm">Customers nearby see your listing, pay through the app and come for self-pickup.</p>
+            </div>
+            <div class="bg-darkertheme border border-zinc-800 p-10 rounded-xl text-left transition duration-300 hover:-translate-y-2 hover:shadow-[0_15px_30px_rgba(0,0,0,0.4)] reveal-up delay-4">
+                <div class="text-6xl font-extrabold text-white opacity-20 mb-4 leading-none">4</div>
+                <h3 class="text-xl font-bold text-white mb-4">Track Your Impact</h3>
+                <p class="text-zinc-400 text-sm">See monthly food rescued, revenue earned and CO2 saved &mdash; all in your partner dashboard.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: Why Partner With Us -->
+    <section id="why-partner" class="py-24 px-5 bg-lighttheme">
+        <div class="max-w-3xl mx-auto text-center mb-16">
+            <span class="text-sm font-extrabold tracking-[0.1em] text-blacktheme mb-4 block reveal-up">&#9632; WHY PARTNER WITH US</span>
+            <h2 class="text-4xl md:text-5xl font-extrabold text-blacktheme mb-6 reveal-up delay-1">More Than Just Listing. A Movement.</h2>
+            <p class="text-lg text-zinc-600 leading-relaxed reveal-up delay-2">Partnering with ResQMeal gives your business real, measurable benefits &mdash; not just a good conscience.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-[1400px] mx-auto">
+            <!-- Card 1 -->
+            <div class="bg-white border border-bordergray rounded-xl overflow-hidden transition duration-300 hover:-translate-y-2 hover:shadow-[0_15px_30px_rgba(0,0,0,0.08)] reveal-up delay-1">
+                <img src="https://images.pexels.com/photos/4386431/pexels-photo-4386431.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Revenue" class="w-full h-48 object-cover">
+                <div class="p-8">
+                    <div class="w-6 h-6 bg-blacktheme rounded mb-4"></div>
+                    <h3 class="text-xl font-bold text-blacktheme mb-3">Recover Lost Revenue</h3>
+                    <p class="text-zinc-600 text-sm leading-relaxed">Every unsold item is money lost. ResQMeal turns your surplus into real revenue &mdash; even at a discount, it beats throwing it away.</p>
+                </div>
+            </div>
+            <!-- Card 2 -->
+            <div class="bg-white border border-bordergray rounded-xl overflow-hidden transition duration-300 hover:-translate-y-2 hover:shadow-[0_15px_30px_rgba(0,0,0,0.08)] reveal-up delay-2">
+                <img src="https://images.pexels.com/photos/590016/pexels-photo-590016.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Analytics Dashboard" class="w-full h-48 object-cover">
+                <div class="p-8">
+                    <div class="w-6 h-6 bg-blacktheme rounded mb-4"></div>
+                    <h3 class="text-xl font-bold text-blacktheme mb-3">Waste Analytics Dashboard</h3>
+                    <p class="text-zinc-600 text-sm leading-relaxed">See exactly how much food your business wastes weekly. Use data to reduce over-preparation and cut costs.</p>
+                </div>
+            </div>
+            <!-- Card 3 -->
+            <div class="bg-white border border-bordergray rounded-xl overflow-hidden transition duration-300 hover:-translate-y-2 hover:shadow-[0_15px_30px_rgba(0,0,0,0.08)] reveal-up delay-3">
+                <img src="https://images.pexels.com/photos/6863515/pexels-photo-6863515.jpeg?auto=compress&cs=tinysrgb&w=600" alt="CSR Certificate" class="w-full h-48 object-cover">
+                <div class="p-8">
+                    <div class="w-6 h-6 bg-blacktheme rounded mb-4"></div>
+                    <h3 class="text-xl font-bold text-blacktheme mb-3">CSR Certificate</h3>
+                    <p class="text-zinc-600 text-sm leading-relaxed">Every partner receives an annual ResQMeal CSR Impact Certificate &mdash; perfect for tenders, grants and brand reputation.</p>
+                </div>
+            </div>
+            <!-- Card 4 -->
+            <div class="bg-white border border-bordergray rounded-xl overflow-hidden transition duration-300 hover:-translate-y-2 hover:shadow-[0_15px_30px_rgba(0,0,0,0.08)] reveal-up delay-1">
+                <img src="https://images.pexels.com/photos/414837/pexels-photo-414837.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Environment" class="w-full h-48 object-cover">
+                <div class="p-8">
+                    <div class="w-6 h-6 bg-blacktheme rounded mb-4"></div>
+                    <h3 class="text-xl font-bold text-blacktheme mb-3">CO2 Savings Tracked</h3>
+                    <p class="text-zinc-600 text-sm leading-relaxed">We calculate how many kg of CO2 your business prevented &mdash; shareable on your social media and website.</p>
+                </div>
+            </div>
+            <!-- Card 5 -->
+            <div class="bg-white border border-bordergray rounded-xl overflow-hidden transition duration-300 hover:-translate-y-2 hover:shadow-[0_15px_30px_rgba(0,0,0,0.08)] reveal-up delay-2">
+                <img src="https://images.pexels.com/photos/2983101/pexels-photo-2983101.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Happy Customers" class="w-full h-48 object-cover">
+                <div class="p-8">
+                    <div class="w-6 h-6 bg-blacktheme rounded mb-4"></div>
+                    <h3 class="text-xl font-bold text-blacktheme mb-3">New Customers Daily</h3>
+                    <p class="text-zinc-600 text-sm leading-relaxed">ResQMeal brings new eco-aware customers to your business &mdash; people who might never have found you otherwise.</p>
+                </div>
+            </div>
+            <!-- Card 6 -->
+            <div class="bg-white border border-bordergray rounded-xl overflow-hidden transition duration-300 hover:-translate-y-2 hover:shadow-[0_15px_30px_rgba(0,0,0,0.08)] reveal-up delay-3">
+                <img src="https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Nature" class="w-full h-48 object-cover">
+                <div class="p-8">
+                    <div class="flex gap-2 mb-4">
+                        <div class="w-6 h-6 bg-blacktheme rounded"></div>
+                        <div class="w-6 h-6 bg-blacktheme rounded"></div>
+                    </div>
+                    <h3 class="text-xl font-bold text-blacktheme mb-3">Support Kerala's Green Mission</h3>
+                    <p class="text-zinc-600 text-sm leading-relaxed">Align your brand with Kerala's sustainability future &mdash; a powerful positioning for any business.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Section: Pricing -->
+    <section id="pricing" class="relative py-24 px-5 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1554118811-1e0d58224f24?q=80&w=2000&auto=format&fit=crop');">
+        <!-- Overlay -->
+        <div class="absolute inset-0 bg-lighttheme bg-opacity-95"></div>
+        
+        <div class="relative z-10 max-w-3xl mx-auto text-center mb-16">
+            <span class="text-sm font-extrabold tracking-[0.1em] text-blacktheme mb-4 block reveal-up">&#9632; PARTNER PLANS</span>
+            <h2 class="text-4xl md:text-5xl font-extrabold text-blacktheme mb-6 reveal-up delay-1">Simple, Transparent Pricing</h2>
+            <p class="text-lg text-zinc-600 leading-relaxed reveal-up delay-2">One flat monthly fee. No commissions. No hidden charges. Cancel anytime.</p>
+        </div>
+
+        <div class="relative z-10 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-[1200px] mx-auto items-center">
+            
+            <!-- Card 1: Basic -->
+            <div class="bg-white border border-bordergray rounded-xl p-8 transition duration-300 hover:-translate-y-2 hover:shadow-[0_15px_30px_rgba(0,0,0,0.08)] reveal-up delay-1">
+                <h3 class="text-2xl font-bold text-blacktheme mb-2">Basic</h3>
+                <div class="flex items-baseline gap-2 mb-8 border-b border-bordergray pb-8">
+                    <span class="text-4xl font-extrabold text-blacktheme">&#8377;499</span>
+                    <span class="text-zinc-500 font-medium">/month</span>
+                </div>
+                <ul class="space-y-4">
+                    <li class="flex items-start gap-3">
+                        <svg class="w-5 h-5 mt-0.5 shrink-0 text-blacktheme" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                        <span class="text-zinc-600">List up to 5 items per day</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <svg class="w-5 h-5 mt-0.5 shrink-0 text-blacktheme" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                        <span class="text-zinc-600">Basic analytics</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <svg class="w-5 h-5 mt-0.5 shrink-0 text-blacktheme" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                        <span class="text-zinc-600">App listing & profile</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <svg class="w-5 h-5 mt-0.5 shrink-0 text-blacktheme" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                        <span class="text-zinc-600">Customer ratings</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <svg class="w-5 h-5 mt-0.5 shrink-0 text-blacktheme" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                        <span class="text-zinc-600">Email support</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Card 2: Most Popular (Standard) -->
+            <div class="bg-blacktheme rounded-xl p-8 md:scale-110 z-20 shadow-[0_20px_40px_rgba(0,0,0,0.15)] transition duration-300 hover:-translate-y-2 hover:shadow-[0_25px_50px_rgba(0,0,0,0.25)] reveal-up delay-2 border border-zinc-800">
+                <div class="inline-block bg-white text-blacktheme px-3 py-1 text-xs font-extrabold uppercase tracking-widest rounded-sm mb-6">&#9632; Most Popular</div>
+                <h3 class="text-2xl font-bold text-white mb-2">Standard</h3>
+                <div class="flex items-baseline gap-2 mb-8 border-b border-zinc-800 pb-8">
+                    <span class="text-5xl font-extrabold text-white">&#8377;999</span>
+                    <span class="text-zinc-400 font-medium">/month</span>
+                </div>
+                <ul class="space-y-4 text-white">
+                    <li class="flex items-start gap-3">
+                        <svg class="w-5 h-5 mt-0.5 shrink-0 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                        <span class="text-zinc-300">Unlimited daily listings</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <svg class="w-5 h-5 mt-0.5 shrink-0 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                        <span class="text-zinc-300">Full waste analytics dashboard</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <svg class="w-5 h-5 mt-0.5 shrink-0 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                        <span class="text-zinc-300">Priority placement in app</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <svg class="w-5 h-5 mt-0.5 shrink-0 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                        <span class="text-zinc-300">CSR certificate (annual)</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <svg class="w-5 h-5 mt-0.5 shrink-0 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                        <span class="text-zinc-300">CO2 savings tracker</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <svg class="w-5 h-5 mt-0.5 shrink-0 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                        <span class="text-zinc-300">WhatsApp support</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Card 3: Premium -->
+            <div class="bg-white border border-bordergray rounded-xl p-8 transition duration-300 hover:-translate-y-2 hover:shadow-[0_15px_30px_rgba(0,0,0,0.08)] reveal-up delay-3">
+                <h3 class="text-2xl font-bold text-blacktheme mb-2">Premium</h3>
+                <div class="flex items-baseline gap-2 mb-8 border-b border-bordergray pb-8">
+                    <span class="text-4xl font-extrabold text-blacktheme">&#8377;1,999</span>
+                    <span class="text-zinc-500 font-medium">/month</span>
+                </div>
+                <ul class="space-y-4">
+                    <li class="flex items-start gap-3">
+                        <svg class="w-5 h-5 mt-0.5 shrink-0 text-blacktheme" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                        <span class="text-zinc-600">Everything in Standard</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <svg class="w-5 h-5 mt-0.5 shrink-0 text-blacktheme" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                        <span class="text-zinc-600">Featured homepage banner</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <svg class="w-5 h-5 mt-0.5 shrink-0 text-blacktheme" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                        <span class="text-zinc-600">Multi-branch management</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <svg class="w-5 h-5 mt-0.5 shrink-0 text-blacktheme" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                        <span class="text-zinc-600">Dedicated account manager</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <svg class="w-5 h-5 mt-0.5 shrink-0 text-blacktheme" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                        <span class="text-zinc-600">Monthly impact report</span>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Section: The Impact (Goals) -->
+    <section id="impact" class="relative py-24 px-5 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80');">
+        <!-- Light Overlay -->
+        <div class="absolute inset-0 bg-white/95"></div>
+        
+        <div class="relative z-10 max-w-3xl mx-auto text-center mb-16">
+            <span class="text-sm font-extrabold tracking-[0.1em] text-blacktheme mb-4 block reveal-up">&#9632; OUR GOAL &mdash; YEAR 1</span>
+            <h2 class="text-4xl md:text-5xl font-extrabold text-blacktheme mb-6 reveal-up delay-1">The Impact We Are Building Towards</h2>
+            <p class="text-lg text-zinc-600 leading-relaxed reveal-up delay-2">Every partner that joins brings Kerala closer to zero food waste. Here is what we are working towards in Year 1.</p>
+        </div>
+
+        <div class="relative z-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-[1400px] mx-auto mb-16">
+            <!-- Stat 1 -->
+            <div class="group bg-white border border-bordergray rounded-xl p-8 text-center transition-all duration-500 hover:-translate-y-3 hover:shadow-[0_20px_40px_rgba(0,0,0,0.12)] bg-opacity-90 backdrop-blur-sm reveal-up delay-1">
+                <div class="inline-flex items-center justify-center w-14 h-14 rounded-full bg-[#f5f5f5] mb-6 transition-transform duration-500 group-hover:scale-110 group-hover:rotate-6">
+                    <svg class="w-7 h-7 text-blacktheme transition-colors duration-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+                </div>
+                <div class="text-5xl font-extrabold text-blacktheme mb-3 count-up-target" data-target="500" data-suffix="+">0+</div>
+                <p class="text-zinc-600 font-medium leading-relaxed">Partner Restaurants, Farms &amp; Businesses</p>
+            </div>
+            
+            <!-- Stat 2 -->
+            <div class="group bg-white border border-bordergray rounded-xl p-8 text-center transition-all duration-500 hover:-translate-y-3 hover:shadow-[0_20px_40px_rgba(0,0,0,0.12)] bg-opacity-90 backdrop-blur-sm reveal-up delay-2">
+                <div class="inline-flex items-center justify-center w-14 h-14 rounded-full bg-[#f5f5f5] mb-6 transition-transform duration-500 group-hover:scale-110 group-hover:-rotate-6">
+                    <svg class="w-7 h-7 text-blacktheme transition-colors duration-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 15.546c-.523 0-1.046.151-1.5.454a2.704 2.704 0 01-3 0 2.704 2.704 0 00-3 0 2.704 2.704 0 01-3 0 2.704 2.704 0 00-3 0 2.704 2.704 0 01-3 0 2.701 2.701 0 00-1.5-.454M9 6v2m3-2v2m3-2v2M9 3h.01M12 3h.01M15 3h.01M21 21v-7a2 2 0 00-2-2H5a2 2 0 00-2 2v7h18zm-3-9v-2a2 2 0 00-2-2H8a2 2 0 00-2 2v2h12z"/></svg>
+                </div>
+                <div class="text-5xl font-extrabold text-blacktheme mb-3 count-up-target" data-target="10000" data-suffix="">0</div>
+                <p class="text-zinc-600 font-medium leading-relaxed">Meals Rescued Every Month</p>
+            </div>
+            
+            <!-- Stat 3 -->
+            <div class="group bg-white border border-bordergray rounded-xl p-8 text-center transition-all duration-500 hover:-translate-y-3 hover:shadow-[0_20px_40px_rgba(0,0,0,0.12)] bg-opacity-90 backdrop-blur-sm reveal-up delay-3">
+                <div class="inline-flex items-center justify-center w-14 h-14 rounded-full bg-[#f5f5f5] mb-6 transition-transform duration-500 group-hover:scale-110 group-hover:rotate-6">
+                    <svg class="w-7 h-7 text-blacktheme transition-colors duration-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                </div>
+                <div class="text-5xl font-extrabold text-blacktheme mb-3 count-up-target" data-target="5" data-suffix=" Tonnes">0 Tonnes</div>
+                <p class="text-zinc-600 font-medium leading-relaxed">Food Waste Prevented Monthly</p>
+            </div>
+            
+            <!-- Stat 4 -->
+            <div class="group bg-white border border-bordergray rounded-xl p-8 text-center transition-all duration-500 hover:-translate-y-3 hover:shadow-[0_20px_40px_rgba(0,0,0,0.12)] bg-opacity-90 backdrop-blur-sm reveal-up delay-4">
+                <div class="inline-flex items-center justify-center w-14 h-14 rounded-full bg-[#f5f5f5] mb-6 transition-transform duration-500 group-hover:scale-110 group-hover:-rotate-6">
+                    <svg class="w-7 h-7 text-blacktheme transition-colors duration-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+                </div>
+                <div class="text-5xl font-extrabold text-blacktheme mb-3 tracking-widest">&#9632; 0</div>
+                <p class="text-zinc-600 font-medium leading-relaxed">Cost to the Community &mdash; Charity always free</p>
+            </div>
+        </div>
+
+        <div class="relative z-10 flex flex-col md:flex-row flex-wrap justify-center items-center gap-6 md:gap-12 max-w-[1400px] mx-auto reveal-up delay-4">
+            <span class="text-sm font-bold text-blacktheme tracking-wide uppercase">&#9632; FSSAI Partner Verified</span>
+            <span class="text-sm font-bold text-blacktheme tracking-wide uppercase">&#9632; Rating &amp; Review System</span>
+            <span class="text-sm font-bold text-blacktheme tracking-wide uppercase">&#9632; Daily Midnight Deadline</span>
+            <span class="text-sm font-bold text-blacktheme tracking-wide uppercase">&#9632; 2-Hr Charity Pickup Window</span>
+        </div>
+    </section>
+
+    <!-- Section: Get In Touch & Early Offer -->
+    <section id="contact" class="bg-[#0f0f0f] py-24 px-5 border-t border-zinc-900">
+        <div class="max-w-4xl mx-auto mb-16 text-center">
+            <h2 class="text-4xl md:text-5xl font-extrabold text-white mb-10 reveal-up">GET IN TOUCH &mdash; Join the Food Rescue Movement</h2>
+            <div class="border border-amber-500 bg-[#1a1a1a] text-amber-500 py-5 px-6 rounded-lg text-center font-bold text-lg md:text-xl reveal-up delay-1 shadow-[0_0_20px_rgba(245,158,11,0.15)]">&#9632; Early Partner Offer: Register now and get 3 months FREE on any plan!</div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-[1400px] mx-auto">
+            <div class="bg-[#141414] border border-zinc-800 rounded-xl p-8 transition duration-300 hover:border-zinc-500 hover:-translate-y-1 reveal-up delay-1 cursor-pointer">
+                <span class="text-xs font-bold tracking-widest text-[#888] block mb-3 uppercase">&#9632; App</span>
+                <p class="text-lg font-bold text-white">ResQMeal &mdash; Android &amp; iOS</p>
+            </div>
+            <div class="bg-[#141414] border border-zinc-800 rounded-xl p-8 transition duration-300 hover:border-zinc-500 hover:-translate-y-1 reveal-up delay-2 cursor-pointer">
+                <span class="text-xs font-bold tracking-widest text-[#888] block mb-3 uppercase">&#9632; WhatsApp</span>
+                <p class="text-lg font-bold text-white">+91 XXXXX XXXXX</p>
+            </div>
+            <div class="bg-[#141414] border border-zinc-800 rounded-xl p-8 transition duration-300 hover:border-zinc-500 hover:-translate-y-1 reveal-up delay-3 cursor-pointer">
+                <span class="text-xs font-bold tracking-widest text-[#888] block mb-3 uppercase">&#9632; Email</span>
+                <p class="text-lg font-bold text-white">partner@resqmeal.in</p>
+            </div>
+            <div class="bg-[#141414] border border-zinc-800 rounded-xl p-8 transition duration-300 hover:border-zinc-500 hover:-translate-y-1 reveal-up delay-4 cursor-pointer">
+                <span class="text-xs font-bold tracking-widest text-[#888] block mb-3 uppercase">&#9632; Location</span>
+                <p class="text-lg font-bold text-white">Kerala, India &mdash; All Districts</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: Target Audience & Footer -->
+    <section class="bg-[#0f0f0f] py-16 px-5 border-t border-zinc-900 border-b">
+        <h3 class="text-2xl font-bold text-white text-center mb-12 reveal-up">Who Can Partner With ResQMeal?</h3>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-[1400px] mx-auto">
+            <div class="bg-[#1a1a1a] p-6 rounded-xl flex items-center justify-center text-center gap-2 reveal-up delay-1 transition duration-300 hover:-translate-y-1 hover:bg-[#222]">
+                <span class="text-white text-sm"><span class="text-[#666] mr-2">&#9632;</span> <span class="font-bold">Restaurants</span><br><span class="text-zinc-400">Any size, any cuisine</span></span>
+            </div>
+            <div class="bg-[#1a1a1a] p-6 rounded-xl flex items-center justify-center text-center gap-2 reveal-up delay-2 transition duration-300 hover:-translate-y-1 hover:bg-[#222]">
+                <span class="text-white text-sm"><span class="text-[#666] mr-2">&#9632;</span> <span class="font-bold">Farmers</span><br><span class="text-zinc-400">Veg, dairy, fruits</span></span>
+            </div>
+            <div class="bg-[#1a1a1a] p-6 rounded-xl flex items-center justify-center text-center gap-2 reveal-up delay-3 transition duration-300 hover:-translate-y-1 hover:bg-[#222]">
+                <span class="text-white text-sm"><span class="text-[#666] mr-2">&#9632;</span> <span class="font-bold">Supermarkets</span><br><span class="text-zinc-400">All sizes welcome</span></span>
+            </div>
+            <div class="bg-[#1a1a1a] p-6 rounded-xl flex items-center justify-center text-center gap-2 reveal-up delay-4 transition duration-300 hover:-translate-y-1 hover:bg-[#222]">
+                <span class="text-white text-sm"><span class="text-[#666] mr-2">&#9632;</span> <span class="font-bold">Caterers</span><br><span class="text-zinc-400">Events &amp; functions</span></span>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-[#050505] py-8 px-5 border-t border-zinc-900 border-b-8">
+        <div class="max-w-[1400px] mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+            <p class="text-zinc-500 text-sm font-semibold">ResQMeal | Save food. Save money. Save the planet.</p>
+            <p class="text-zinc-600 text-sm tracking-wide">Kerala, India | &copy; 2026 ResQMeal. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Interactive Scripts -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            
+            const startCountUp = (el, target, formatFn, duration = 1500) => {
+                let startTime = null;
+                const step = (timestamp) => {
+                    if (!startTime) startTime = timestamp;
+                    const MathFloor = Math.floor;
+                    const progress = Math.min((timestamp - startTime) / duration, 1);
+                    const easeOutQuad = progress * (2 - progress);
+                    const current = MathFloor(easeOutQuad * target);
+                    
+                    el.innerHTML = formatFn(current);
+                    
+                    if (progress < 1) {
+                        window.requestAnimationFrame(step);
+                    } else {
+                        el.innerHTML = formatFn(target); // Force exact target at end
+                    }
+                };
+                window.requestAnimationFrame(step);
+            };
+
+            // Wait slightly until the Stats element starts its fade-in animation
+            setTimeout(() => {
+                const countPercentage = document.getElementById('count-percentage');
+                const countValue = document.getElementById('count-value');
+                if(countPercentage) startCountUp(countPercentage, 40, val => `${val}%`);
+                if(countValue) startCountUp(countValue, 92, val => `&#8377;${val}K Cr`);
+            }, 600); // 600ms = 400ms CSS delay + 200ms into the animation
+
+            // Scroll-triggered animations
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.15
+            };
+            
+            const revealObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('in-view');
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.reveal-up').forEach((el) => {
+                revealObserver.observe(el);
+            });
+
+            // Count-up numbers on scroll feature
+            const numberObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const el = entry.target;
+                        const targetVal = parseFloat(el.getAttribute('data-target'));
+                        const suffix = el.getAttribute('data-suffix') || '';
+                        
+                        let formatFn = (val) => {
+                            if (val >= 1000) return val.toLocaleString('en-IN') + suffix;
+                            return val + suffix;
+                        };
+                        
+                        startCountUp(el, targetVal, formatFn, 2000);
+                        observer.unobserve(el);
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.count-up-target').forEach((el) => {
+                numberObserver.observe(el);
+            });
+
+            // Mobile Menu Toggle
+            const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+            const navLinks = document.querySelector('.nav-links');
+            if (mobileMenuBtn && navLinks) {
+                mobileMenuBtn.addEventListener('click', () => {
+                    navLinks.classList.toggle('active');
+                });
+                
+                // Close menu when a link is clicked
+                document.querySelectorAll('.nav-links a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        navLinks.classList.remove('active');
+                    });
+                });
+            }
+        });
+    </script>
+</body>
+</html>
