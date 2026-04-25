@@ -1,9 +1,9 @@
 :root {
-    --bg-black: #0f0f0f;
-    --bg-darker: #0c0c0c;
+    --bg-black: #223756; /* Navy Blue from image */
+    --bg-darker: #1a2a43; /* Darker Navy */
     --text-white: #ffffff;
-    --text-grey: #a1a1aa;
-    --border-color: #27272a;
+    --text-grey: #cbd5e1; /* Slightly lighter grey for contrast against blue */
+    --border-color: rgba(255, 255, 255, 0.1);
     --nav-height: 90px;
 }
 
@@ -48,7 +48,7 @@ a {
     justify-content: space-between;
     align-items: center;
     padding: 0 5%;
-    background-color: rgba(0, 0, 0, 0.85);
+    background-color: rgba(26, 42, 67, 0.85); /* Navy blue with opacity */
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     border-bottom: 1px solid var(--border-color);
